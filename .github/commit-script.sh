@@ -1,8 +1,13 @@
 #!/bin/bash
 
-cd rule-set
+set -e -o pipefail
 
-git checkout -b rule-set
+cd rule-set
+git init
+git config --local user.email "github-action@users.noreply.github.com"
+git config --local user.name "GitHub Action"
+git remote add origin https://github-action:$GITHUB_TOKEN@github.com/lhear/sing-geosite.git
+git branch -M rule-set
 git add .
-git commit -m "Auto commit files"
-git push origin rule-set
+git commit -m "Update rule-set"
+git push -f origin rule-set
