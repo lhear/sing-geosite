@@ -34,7 +34,8 @@ func main() {
 		if err != nil {
 			log.Fatalln(err.Error())
 		}
-		compileRuleSet(src, e.Name)
+		os.MkdirAll("rule-set", os.ModePerm)
+		compileRuleSet(src, "rule-set/"+e.Name)
 	}
 }
 
