@@ -75,7 +75,7 @@ func ConvertYAMLToJSON(yamlPath string) ([]byte, error) {
 				"domain_suffix": func() []string {
 					var domains []string
 					for _, domain := range yamlMap["payload"].([]interface{}) {
-						domains = append(domains, strings.Replace(domain.(string), "+", "", -1))
+						domains = append(domains, strings.Replace(domain.(string), "+.", "", -1))
 					}
 					return domains
 				}(),
