@@ -25,6 +25,7 @@ var (
 	CLASH_RULE_URL = []RuleUrl{
 		{"gfw.srs", "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt"},
 		{"ads.srs", "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt"},
+		{"direct.srs", "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt"},
 	}
 )
 
